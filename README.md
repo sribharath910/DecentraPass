@@ -44,3 +44,44 @@ The system prevents ticket fraud, scalping, and enables fair revenue sharing thr
 - Fan Engagement Campaigns
 
 ---
+
+## 🚀 Backend Setup & Installation
+
+1. Setup Python virtual environment:
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+2. Configure environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configuration
+```
+
+3. Start the Algorand Sandbox:
+```bash
+cd sandbox
+./sandbox up
+```
+
+4. Start the FastAPI server:
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+The API will be available at http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+- Alternative Documentation: http://localhost:8000/redoc
+
+## 📡 API Endpoints
+
+### Tickets
+- `POST /api/v1/tickets/mint` - Mint new NFT ticket
+- `GET /api/v1/tickets/validate/{asset_id}` - Validate ticket ownership
+- `GET /api/v1/tickets/{asset_id}/metadata` - Get ticket metadata
+
+---

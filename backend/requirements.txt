@@ -1,0 +1,9 @@
+fastapi>=0.70.0
+uvicorn>=0.15.0
+python-dotenv>=0.19.0
+py-algorand-sdk>=2.0.0
+python-multipart>=0.0.5
+requests>=2.26.0
+pinata-sdk>=0.1.0
+pydantic>=1.8.2
+sqlalchemy>=1.4.0
